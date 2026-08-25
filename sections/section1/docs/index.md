@@ -17,7 +17,7 @@ setup script.
     % source setup-ece4750.sh
     % mkdir -p $HOME/ece4750
     % cd $HOME/ece4750
-    % git clone git@github.com:cornell-ece4750/ece4750-sections-fa26.git
+    % git clone git@github.com:cornell-ece4750/2026F.git
     % cd 2026F/sections/section1
     % TOPDIR=$PWD
 
