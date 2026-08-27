@@ -323,10 +323,13 @@ in two different ways.
 ![](assets/fig/linetrace.png)
 
 Finally, the ad-hoc test also generates a VCD file that enables much more
-detailed waveform visualization using gtkwave.
+detailed waveform visualization using Surfer. See [tutorial
+3](https://www.csl.cornell.edu/courses/ece4750/handouts/ece4750-tut3-verilog.pdf)
+for instructions on how to first install Surfer on `ecelinux`. Once Surfer
+is installed, you can view the VCD file as follows:
 
     % cd $TOPDIR/build
-    % gtkwave imul-v1-adhoc-test.vcd
+    % code imul-v1-adhoc-test.vcd
 
 Verilog RTL for Single-Cycle Multiplier with Valid Bit
 --------------------------------------------------------------------------
