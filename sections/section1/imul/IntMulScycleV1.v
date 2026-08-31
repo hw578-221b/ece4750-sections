@@ -23,10 +23,25 @@ module imul_IntMulScycleV1
   //----------------------------------------------------------------------
   // Implement the two input registers below.
 
+  logic [31:0] in0_reg, in1_reg;
+
+  always_ff @(posedge clk) begin
+    if(reset) begin
+      in0_reg <= 32'd0;
+      in1_reg <= 32'd0;
+    end
+    else begin
+      in0_reg <= in0;
+      in1_reg <= in1;
+    end
+  end
+
   //----------------------------------------------------------------------
   // Multiplication Logic (combinational logic)
   //----------------------------------------------------------------------
   // Implement the multiplication logic below.
+
+  assign out = in0_reg * in1_reg;
 
   //----------------------------------------------------------------------
   // Line Tracing

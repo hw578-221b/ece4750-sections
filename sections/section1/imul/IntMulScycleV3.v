@@ -37,6 +37,8 @@ module imul_IntMulScycleV3
   logic [31:0] istream_msg_in0_reg;
   logic [31:0] istream_msg_in1_reg;
 
+  // The operand registers can contain either meaningful data or irrelevant old data. 
+  // Therefore, the design needs a bit indicating whether those registers currently contain a real request
   always @( posedge clk ) begin
     if ( reset ) begin
       istream_val_reg     <= 0;
@@ -60,8 +62,11 @@ module imul_IntMulScycleV3
   //----------------------------------------------------------------------
   // Ready Logic
   //----------------------------------------------------------------------
-
+  
+  // I can accept a new input exactly when my current output is allowed to advance
   assign istream_rdy = ostream_rdy;
+  // Better: assign istream_rdy = ~istream_val_reg || ostream_rdy
+  // This means the buffer can accept input when it is either empty or its current output is being consumed
 
   //----------------------------------------------------------------------
   // Line Tracing
