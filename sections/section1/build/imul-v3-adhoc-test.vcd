@@ -1,0 +1,215 @@
+$date
+  Mon Aug 31 11:37:48 2026
+$end
+$version
+  PyMTL 3 (Mamba)
+$end
+$timescale
+ 10ps
+$end
+
+$scope module top $end
+  $var reg 1 ! reset $end
+  $var reg 1 " clk $end
+  $scope module imul $end
+    $var reg 64 ) s_DOT_istream_DOT_msg $end
+    $var reg 1 % ostream.rdy $end
+    $var reg 64 $ istream.msg $end
+    $var reg 32 & ostream.msg $end
+    $var reg 1 ! reset $end
+    $var reg 1 * s_DOT_ostream_DOT_rdy $end
+    $var reg 1 ' istream.val $end
+    $var reg 1 # istream.rdy $end
+    $var reg 1 + s_DOT_istream_DOT_val $end
+    $var reg 1 ( ostream.val $end
+    $var reg 32 , s_DOT_ostream_DOT_msg $end
+    $var reg 1 - s_DOT_reset $end
+    $var reg 1 " clk $end
+    $var reg 1 . s_DOT_istream_DOT_rdy $end
+    $var reg 1 / s_DOT_ostream_DOT_val $end
+  $upscope $end
+  $scope module src $end
+    $var reg 1 # ostream.rdy $end
+    $var reg 1 ! reset $end
+    $var reg 1 " clk $end
+    $var reg 1 ' ostream.val $end
+    $var reg 64 $ ostream.msg $end
+  $upscope $end
+  $scope module sink $end
+    $var reg 1 " clk $end
+    $var reg 1 ! reset $end
+    $var reg 1 ( istream.val $end
+    $var reg 1 % istream.rdy $end
+    $var reg 32 & istream.msg $end
+  $upscope $end
+$upscope $end
+$enddefinitions $end
+
+0!
+0"
+0#
+b0000000000000000000000000000000000000000000000000000000000000000 $
+0%
+b00000000000000000000000000000000 &
+0'
+0(
+b0000000000000000000000000000000000000000000000000000000000000000 )
+0*
+0+
+b00000000000000000000000000000000 ,
+0-
+0.
+0/
+
+#0
+1"
+
+1!
+b0000000000000000000000000000000000000000000000000000000000000000 $
+0%
+b00000000000000000000000000000000 &
+0'
+b0000000000000000000000000000000000000000000000000000000000000000 )
+0*
+b00000000000000000000000000000000 ,
+1-
+
+#50
+0"
+#100
+1"
+
+
+#150
+0"
+#200
+1"
+
+
+#250
+0"
+#300
+1"
+
+0!
+0-
+
+#350
+0"
+#400
+1"
+
+b0000000000000000000000000000001000000000000000000000000000000011 $
+1'
+b0000000000000000000000000000001000000000000000000000000000000011 )
+1+
+
+#450
+0"
+#500
+1"
+
+
+#550
+0"
+#600
+1"
+
+
+#650
+0"
+#700
+1"
+
+1#
+1%
+1*
+1.
+
+#750
+0"
+#800
+1"
+
+b0000000000000000000000000001000000000000000000000000000000000010 $
+b00000000000000000000000000000110 &
+1(
+b0000000000000000000000000001000000000000000000000000000000000010 )
+b00000000000000000000000000000110 ,
+1/
+
+#850
+0"
+#900
+1"
+
+0#
+0%
+b00000000000000000000000000100000 &
+0'
+0*
+0+
+b00000000000000000000000000100000 ,
+0.
+
+#950
+0"
+#1000
+1"
+
+
+#1050
+0"
+#1100
+1"
+
+1#
+1%
+1*
+1.
+
+#1150
+0"
+#1200
+1"
+
+0#
+0%
+0(
+0*
+0.
+0/
+
+#1250
+0"
+#1300
+1"
+
+
+#1350
+0"
+#1400
+1"
+
+1#
+1%
+1*
+1.
+
+#1450
+0"
+#1500
+1"
+
+
+#1550
+0"
+#1600
+1"
+
+
+#1650
+0"
+#1700
+1"
+
