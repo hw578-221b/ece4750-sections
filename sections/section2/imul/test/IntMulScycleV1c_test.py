@@ -15,10 +15,11 @@ from imul.IntMulScycleV1 import IntMulScycleV1
 
 basic_test_vectors = [
   ('in0 in1 out*'),
-  [ 2,  2,  4  ],
-  [ 3,  2,   6   ],
-  [ 3,  3,   9   ],
-  [ 0,  0,   0   ],
+  [ 2, 2, '?' ], # Initial output is ignored
+  [ 3, 2,  4  ], # Result from previous 2 * 2 (after 1 cycle)
+  [ 3, 3,  6  ], # Result from previous 3 * 2
+  [ 0, 0,  9  ], # Result from previous 3 * 3
+  [ 0, 0,  0  ], # Result from previous 0 * 0
 ]
 
 #-------------------------------------------------------------------------
@@ -27,9 +28,10 @@ basic_test_vectors = [
 
 overflow_test_vectors = [
   ('in0         in1 out*'),
-  [ 0x80000001, 2,  2  ],
-  [ 0xc0000002, 4,   8   ],
-  [ 0x00000000, 0,   0   ],
+  [ 0x80000001, 2, '?' ],
+  [ 0xc0000002, 4,  2  ],
+  [ 0x00000000, 0,  8  ],
+  [ 0x00000000, 0,  0  ],
 ]
 
 #-------------------------------------------------------------------------

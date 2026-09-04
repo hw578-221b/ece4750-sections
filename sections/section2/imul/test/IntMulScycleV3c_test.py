@@ -106,6 +106,7 @@ def test_random_delay1( cmdline_opts ):
     imsgs.extend([ mk_imsg(a,b) ])
     omsgs.extend([ mk_omsg(a*b) ])
 
+  # set the delay to be 1 cycle in the stream sink
   th = TestHarness( IntMulScycleV3(), imsgs, omsgs, 1 )
   run_sim( th, cmdline_opts, duts=['imul'] )
 
@@ -124,6 +125,7 @@ def test_random_delay3( cmdline_opts ):
     imsgs.extend([ mk_imsg(a,b) ])
     omsgs.extend([ mk_omsg(a*b) ])
 
+  # set the delay to be 3 cycles in the stream sink
   th = TestHarness( IntMulScycleV3(), imsgs, omsgs, 3 )
   run_sim( th, cmdline_opts, duts=['imul'] )
 
