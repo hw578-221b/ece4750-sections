@@ -1,0 +1,8 @@
+# *.py[cod] ignores filenames ending in .pyc, .pyo, or .pyd.
+# - * matches any filename prefix.
+# - [cod] matches one character: c, o, or d.
+# Examples: module.pyc, module.pyo, module.pyd. These are Python bytecode or compiled extension files. It doesn’t match .py source files.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+build/
